@@ -6,14 +6,14 @@ import android.util.Log;
 
 import androidx.annotation.Nullable;
 
-public class SecondActivity extends Activity {
+public class B extends Activity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_second);
 
-        Log.d("CallBack Method", "SecondActivity onCreate()");
+        Log.d("CallBack Method", "B onCreate()");
     }
 
 
@@ -21,7 +21,7 @@ public class SecondActivity extends Activity {
     protected void onRestart() {
         super.onRestart();
 
-        Log.d("CallBack Method", "SecondActivity onRestart()");
+        Log.d("CallBack Method", "B onRestart()");
 
     }
 
@@ -29,7 +29,7 @@ public class SecondActivity extends Activity {
     protected void onStart() {
         super.onStart();
 
-        Log.d("CallBack Method", "SecondActivity onStart()");
+        Log.d("CallBack Method", "B onStart()");
 
     }
 
@@ -38,18 +38,24 @@ public class SecondActivity extends Activity {
     protected void onResume() {
         super.onResume();
 
-        Log.d("CallBack Method", "SecondActivity onResume()");
+        Log.d("CallBack Method", "B onResume()");
 
     }
-
-
 
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
 
-        Log.d("CallBack Method", "SecondActivity onDestroy()");
+        Log.d("CallBack Method", "B onDestroy()");
 
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+
+
+        this.finish();
     }
 }

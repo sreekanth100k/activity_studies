@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".A">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:text="MainActivity"
+        android:textColor="@android:color/holo_red_dark"
         android:id="@+id/id_hello_world_tv"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -21,8 +24,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/id_goto_next"
+        android:textColor="@android:color/black"
         app:layout_constraintTop_toBottomOf="@id/id_hello_world_tv"
         app:layout_constraintLeft_toRightOf="@id/id_hello_world_tv"
         android:text="Goto Next"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
